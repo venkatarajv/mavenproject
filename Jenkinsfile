@@ -19,12 +19,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Generate HTML report') {
-            steps {
-                cucumber buildStatus: "UNSTABLE",
-                        fileIncludePattern: '**/cucumber.json',
-                        jsonReportDirectory: 'target'
             }
 
         }
