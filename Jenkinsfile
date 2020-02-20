@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn clean compile'
+                    sh 'mvn clean install'
                 }
             }
         }
@@ -20,13 +20,13 @@ pipeline {
             }
         }
 
-
-        stage ('Deployment Stage') {
+        stage('Generate HTML report') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
-                }
+                cucumber buildStatus: "UNSTABLE",
+                        fileIncludePattern: '**/cucumber.json',
+                        jsonReportDirectory: 'target'
             }
+
         }
     }
 }
