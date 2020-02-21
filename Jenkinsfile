@@ -1,16 +1,19 @@
 pipeline {
     agent any
-
+    tools { 
+        maven 'Maven 3.3.9' 
+        jdk 'jdk8' 
+    }
     stages {
-        stage ('Compile Stage') {
-
+        stage ('Initialize') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn clean compile'
-                }
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                    mvn clean compile
+                ''' 
             }
         }
-
         stage ('Testing Stage') {
 
             steps {
@@ -19,13 +22,9 @@ pipeline {
                 }
             }
         }
-
-
-        stage ('Deployment Stage') {
+        stage ('Build') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
-                }
+                echo 'This is a minimal pipeline.'
             }
         }
     }
