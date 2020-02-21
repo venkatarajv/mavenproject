@@ -59,7 +59,7 @@
 
     </dependencies>
 
-    <!-- <repositories>
+    <repositories>
         <repository>
             <id>myMavenRepo.read</id>
             <url>http://localhost:8080/</url>
@@ -71,6 +71,6 @@
             <id>myMavenRepo.write</id>
             <url>http://localhost:8080/</url>
         </repository>
-    </distributionManagement> -->
+    </distributionManagement>
 
 </project>
