@@ -18,10 +18,9 @@ pipeline {
         {
             steps 
             {
-                // sh "mvn clean install"
-                // sh "mvn clean package"
-                // sh "mvn clean compile"
-                echo "deployed"
+                sh "mvn clean install"
+                sh "mvn clean package"
+                sh "mvn clean compile"
             }
         }
         stage ('Test Stage') 
