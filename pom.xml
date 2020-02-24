@@ -59,17 +59,17 @@
 
     </dependencies>
     <!-- <packaging>war</packaging>  -->
-        <repositories>
+    <repositories>
         <repository>
             <id>myMavenRepo.read</id>
-            <url>http://localhost:8080/</url>
+            <url>http://localhost:8080/manager/</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <repository>
             <id>myMavenRepo.write</id>
-            <url>http://localhost:8080/</url>
+            <url>http://localhost:8080/manager/</url>
         </repository>
     </distributionManagement>
 
