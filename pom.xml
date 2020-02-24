@@ -77,10 +77,10 @@
         </repository>
     </repositories>
 
-    <!-- <distributionManagement>
+    <distributionManagement>
         <repository>
             <id>myMavenRepo.write</id>
             <url>http://localhost:8080/manager/</url>
         </repository>
-    </distributionManagement> -->
+    </distributionManagement>
 </project>
