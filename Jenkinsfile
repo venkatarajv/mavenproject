@@ -1,26 +1,41 @@
 pipeline {
     agent any
-    tools { 
+    tools 
+    { 
         maven 'maven' 
     }
-    stages {
-        stage ('Initialize') {
-            steps {
-                sh '''
-                    mvn clean compile
-                ''' 
+    stages
+    
+    {
+        stage ('Init stage') 
+        {
+            steps 
+            {
+                git credentialsId: 'f017161e-31e0-45df-bafe-9afa4c3903ef', url: 'https://github.com/venkatarajv/mavenproject.git'
             }
         }
-        stage ('Testing Stage') {
-
-            steps {
-               
-                    sh 'mvn test'
+        stage ('compile stage') 
+        {
+            steps 
+            {
+                sh "mvn clean package"
+                sh "mvn clean compile"
             }
         }
-        stage ('Build') {
-            steps {
-                echo 'This is a minimal pipeline.'
+        stage ('Test Stage') 
+        {
+            steps 
+            {
+                sh 'mvn test'
+                
+            }
+        }
+        stage ('Deployment Stage') 
+        {
+            steps 
+            {
+                sh 'mvn tomcat:deploy '
+                
             }
         }
     }
