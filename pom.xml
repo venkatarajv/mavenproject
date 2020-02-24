@@ -65,14 +65,14 @@
     <repositories>
         <repository>
             <id>myMavenRepo.read</id>
-            <url>http://localhost:8080/manager/</url>
+            <url>http://admin:password@localhost:8080/manager/</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <repository>
             <id>myMavenRepo.write</id>
-            <url>http://localhost:8080/manager/</url>
+            <url>http://admin:password@localhost:8080/manager/</url>
         </repository>
     </distributionManagement>
 
