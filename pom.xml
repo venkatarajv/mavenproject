@@ -70,8 +70,6 @@
     </dependencies>
     <!-- <packaging>war</packaging>  -->
 
-    
-
     <repositories>
         <repository>
             <id>myMavenRepo.read</id>
@@ -79,10 +77,10 @@
         </repository>
     </repositories>
 
-    <distributionManagement>
+    <!-- <distributionManagement>
         <repository>
             <id>myMavenRepo.write</id>
             <url>http://localhost:8080/manager/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement> -->
 </project>
