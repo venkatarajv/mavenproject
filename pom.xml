@@ -7,8 +7,7 @@
     <groupId>sample</groupId>
     <artifactId>jenkins-example</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-
+    <packaging>war</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -57,9 +56,7 @@
             <version>4.12</version>
         </dependency>
 
-    </dependencies>
-    <packaging>war</packaging> 
-
+    </dependencies> 
     <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
