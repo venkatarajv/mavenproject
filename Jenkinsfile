@@ -18,6 +18,7 @@ pipeline {
         {
             steps 
             {
+                sh "mvn clean install"
                 sh "mvn clean package"
                 sh "mvn clean compile"
             }
@@ -34,6 +35,7 @@ pipeline {
         {
             steps 
             {
+                sh 'mvn install'
                 sh 'mvn tomcat:deploy '
                 
             }
