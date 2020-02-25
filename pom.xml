@@ -72,6 +72,11 @@
 
     <repositories>
         <repository>
+            <configuration>
+                <url>http://localhost:8080/manager/text</url>
+                <username>admin</username>
+                <password>password</password>
+                </configuration>
             <id>myMavenRepo.read</id>
             <url>http://localhost:8080/manager/</url>
         </repository>

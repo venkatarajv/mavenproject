@@ -18,7 +18,7 @@ pipeline {
         {
             steps 
             {
-                sh "mvn clean install"
+                sh "mvn clean"
                 sh "mvn clean package"
                 sh "mvn clean compile"
             }
